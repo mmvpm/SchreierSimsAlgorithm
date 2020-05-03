@@ -200,4 +200,4 @@ if __name__ == '__main__':
     example_G()
     
     # Исполнение my_task() займёт ~ 15 минут
-    my_task()
+    # my_task()
