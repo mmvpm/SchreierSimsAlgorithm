@@ -59,7 +59,7 @@ class StabilizerChain:
         self.chain.append(value)
     
     
-    # Нахождение образуюих Шрайера
+    # Нахождение образующих Шрайера
     def build_new_gen_set(self):
         new_gen_set = set()
         step = self[-1]
@@ -118,7 +118,7 @@ class StabilizerChain:
         return set([x + 1])
     
     
-    # Порождающие Stab_{1, ..., x}
+    # Порождающие Stab_{1, ..., index}
     def get_gen_set(self, index):
         return self[index].gen_set
     

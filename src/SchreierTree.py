@@ -40,7 +40,7 @@ class SchreierTree:
                 self.data[u] = [v, i]
                 self.build(u)
     
-    # Нахождение h_v : h_v(1) = v
+    # Нахождение h_v : h_v(self.root) = v
     def find_conversion(self, v, used):
         if used[v]:
             return
@@ -57,7 +57,7 @@ class SchreierTree:
         self.conversion[v] = self.gen_set[parent[1]] * self.conversion[parent[0]]
     
     
-    # Возвращает h такой, что h(v) = 1
+    # Возвращает h такой, что h(v) = self.root
     def get_conversion(self, v):
         return self.conversion[v] ** (-1)
     

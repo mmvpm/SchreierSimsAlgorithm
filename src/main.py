@@ -204,11 +204,20 @@ def my_task():
 
 if __name__ == '__main__':
     
-    example_permutations()
-    A_5 = example_A_5()
-    G = example_G()
+    #example_permutations()
+    #A_5 = example_A_5()
+    #G = example_G()
     
     # Исполнение my_task() займёт ~ 15 минут
-    TG = my_task()
+    # TG = my_task()
     
     # Можно всё ещё использовать группы A_5, G, TG в консоли
+    
+    N = 54
+    list1 = list(range(N // 2, N)) + list(range(0, N // 2))
+    list2 = []
+    for i in range(N // 2):
+        list2.append(i)
+        list2.append(i + N // 2)
+    formS = [Permutation(list1), Permutation(list2)]
+    g = StabilizerChain(formS)
